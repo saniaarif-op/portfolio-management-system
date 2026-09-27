@@ -76,24 +76,4 @@ Frontend runs on the Vite URL shown in the terminal, normally `http://localhost:
 - `PUT /api/portfolio/projects/reorder`
 - `GET /api/portfolio/me`
 
-## Submission checklist
-
-- [x] System architecture
-- [x] Database structure
-- [x] User profile model
-- [x] Project model
-- [x] REST API
-- [x] Dynamic username routing
-- [x] Creator dashboard
-- [x] Public portfolio
-- [x] Responsive UI
-- [x] Database-connected forms
-- [x] Input validation
-- [x] Protected routes
-- [x] Unauthorized update prevention
-- [x] API documentation
-- [x] Local setup
-- [x] Deployment guidance
-- [x] Professional README
-
-You still need to create your final 3–5 minute demo recording, LinkedIn post and submission PDF links after running/deploying your own copy.
+y.
