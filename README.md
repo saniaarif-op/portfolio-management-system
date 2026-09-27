@@ -1,4 +1,4 @@
-# Portfolio Management System — EncoderX Week 03
+# Portfolio Management System
 
 A full-stack portfolio management platform built for the EncoderX Remote Internship Batch 02, Week 03 task.
 
