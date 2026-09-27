@@ -61,15 +61,7 @@ npm run dev
 
 Frontend runs on the Vite URL shown in the terminal, normally `http://localhost:5173`.
 
-### Demo account
 
-After seeding:
-
-- Email: `demo@portfolio.dev`
-- Password: `Demo@12345`
-- Public profile: `http://localhost:5173/portfolio/sania`
-
-Change the password before using the project publicly.
 
 ## API
 
