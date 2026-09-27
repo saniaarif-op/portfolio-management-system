@@ -1,0 +1,31 @@
+PORTFOLIA — ENCODERX WEEK 03
+=============================
+
+1. Open this whole folder in VS Code.
+
+2. Backend:
+   cd backend
+   npm install
+   copy .env.example .env
+   npx prisma migrate dev --name init
+   npm run seed
+   npm run dev
+
+3. Frontend:
+   Open another VS Code terminal.
+   cd frontend
+   npm install
+   copy .env.example .env
+   npm run dev
+
+4. Open the frontend URL shown by Vite.
+
+Demo:
+Email: demo@portfolio.dev
+Password: Demo@12345
+Public profile: /portfolio/sania
+
+IMPORTANT:
+- Keep backend running while using the frontend.
+- For deployment, follow docs/TECHNICAL_DOCUMENTATION.md.
+- Before public deployment, change demo credentials and JWT_SECRET.

@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  username     String    @unique
+  email        String    @unique
+  passwordHash String
+  title        String    @default("Full Stack Developer")
+  bio          String    @default("")
+  location     String    @default("")
+  avatarUrl    String    @default("")
+  resumeUrl    String    @default("")
+  skills       String    @default("[]")
+  socials      String    @default("[]")
+  projects     Project[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Project {
+  id           String         @id @default(cuid())
+  title        String
+  description  String
+  projectUrl   String         @default("")
+  githubUrl    String         @default("")
+  technologies String         @default("[]")
+  featured     Boolean        @default(false)
+  sortOrder    Int            @default(0)
+  userId       String
+  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  images       ProjectImage[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@index([userId, sortOrder])
+}
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  imageUrl  String
+  sortOrder Int      @default(0)
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([projectId, sortOrder])
+}
